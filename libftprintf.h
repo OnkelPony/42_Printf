@@ -6,21 +6,20 @@
 /*   By: jimartin <jimartin@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 15:53:07 by jimartin          #+#    #+#             */
-/*   Updated: 2023/02/23 15:58:24 by jimartin         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:09:44 by jimartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
-# include <ctype.h>
-# include <errno.h>
-# include <limits.h>
-# include <stdbool.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
+# include <stdarg.h>
+# include <stddef.h>
+# include "libft_subset/libft.h"
+# ifndef ARG_CHARS
+#  define ARG_CHARS "cspdiuxX"
+# endif
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *format, ...);
+
 
 #endif
